@@ -76,7 +76,7 @@ body {
     line-height: 1.5;
     display: grid;
     grid-template-rows: min-content 1fr;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 /* Make images easier to work with */
@@ -196,9 +196,30 @@ input, button, textarea, select {
     align-items: end;
   }
 
+
+  .header::after {
+    content: '';
+    display: block;
+    position: relative;
+    height: 1px;
+    width: 100%;
+    margin-right: -2rem;
+    margin-left: -4rem;
+    margin-top: 5rem;
+    background: hsl( var(--clr-white) / .25);
+    order: 3;
+  }
+
+  nav > ul > li > a   {
+    display:inline-block;
+    white-space: nowrap;
+  }
+
   nav {
     backdrop-filter: blur(1rem);
+    order: 4;
   }
+
 }
 
 /* .grid-container > *:first-child {
@@ -300,7 +321,7 @@ input, button, textarea, select {
     background: hsl( var(--clr-white) / .1);
     border-radius: 50%;
     opacity: 0;
-    transition: opacity 3s linear, transform 1s ease-in-out;
+    transition: opacity 1s linear, transform 1s ease-in-out;
 }
 
 .large-button:hover::after,
@@ -400,14 +421,15 @@ input, button, textarea, select {
 
 .div__logo {
   align-self: center;
-  margin-left: 5%;
-
+  margin-left: 4%;
+  min-width: 7rem;
+  flex-wrap: nowrap;
+  margin-top: 2rem;
 }
 
 nav {
 background-color: hsl( var(--clr-white) / .1);
-padding-right: 8%;
-padding-left: 4%;
+padding-inline: clamp(1rem, 5vw, 10rem);
 margin-top:2rem;
 
 }
@@ -416,7 +438,7 @@ margin-top:2rem;
 
 
 
-@media (min-width:35rem) and (max-width:45rem) {
+@media (min-width:35.001rem) and (max-width:44.999rem) {
   .home {
     background-image: url(./starter-code/assets/home/background-home-tablet.jpg);
     background-size: cover;
@@ -426,24 +448,24 @@ margin-top:2rem;
 
   .flex {
     display: flex;
-    --gap:1rem;
+    --gap:0.37rem;
 }
   nav {
     /* background-color: hsl( var(--clr-white) / .1); */
     backdrop-filter: blur(1rem);
-    padding-right: 0.2rem;
-    padding-left: 0.2rem;
+    padding-right: 0.1rem;
+    padding-left: 0.1rem;
     margin-top: 0;
   }
 
-  ul > li, a {
+  ul > li, a{
     padding-left: 0;
   }
 
 
-   a > span {
+   ul > li > a > span {
     visibility: hidden;
-    overflow: hidden;
+    white-space:nowrap;
   } 
 
   .grid-container {
@@ -458,6 +480,12 @@ margin-top:2rem;
 
 
 @media (max-width:35rem) {
+
+  body{
+    max-height:100vh;
+    overflow-y: hidden;
+  }
+
   .home {
     background-image: url(./starter-code/assets/home/background-home-mobile.jpg);
     background-size: cover;
@@ -480,7 +508,8 @@ margin-top:2rem;
     background: #aaaaaa44;
     backdrop-filter: blur(1rem);
     transform: translateX(100%);
-    transition: all 2s ease-in-out;
+    transition: all 1s ease-in-out;
+    overflow-y: hidden;
   }
 
   .nav-menu[data-visible="true"] {
@@ -527,20 +556,4 @@ margin-top:2rem;
     position: fixed;
     top: 0.2rem;
   }
-
-
- /*  .hamburguer{
-    display: grid;
-    position: absolute;
-    top: 2rem;
-    right: 1rem;
-    cursor: pointer;
-  }
-  
-  .hamburguer > span {
-    border: 1px solid hsl( var(--clr-light));
-    margin: 4px;
-    width: 30px;
-  }
- */
 }
