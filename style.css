@@ -84,8 +84,8 @@ body {
 /* Make images easier to work with */
 img, picture {
   max-width: 100%;
-  display: block;
-}
+/*   display: block; 
+ esta linea la elimino ya que si la dejo activa opaca el atributo Hidden*/}
 
 /*make form elements easier to work with, Inherit fonts for inputs and buttons */
 input, button, textarea, select {
@@ -593,7 +593,9 @@ margin-top:2rem;
   margin-top: 2rem;
 }
 
-#moon > img {
+/* atencion */
+
+#moon > picture {
   margin: 2rem 0;
 }
 
@@ -608,7 +610,9 @@ margin-top:2rem;
       'content';
 }
 
-.grid-container--destination > img {
+/* atencion */
+
+.grid-container--destination > picture {
   grid-area: image;
   max-width: 60%;
 }
@@ -687,8 +691,10 @@ margin-top:2rem;
           '. image tabs .'
           '. image content .';
   }
-  
-  .grid-container--destination > img {
+
+  /*  atencion */
+
+  .grid-container--destination > picture {
       max-width: 90%;
   }
   
