@@ -486,7 +486,7 @@ margin-top:2rem;
 
 
   .nav-menu {
-    display: flex;
+    display:none;
     flex-direction: column;
     right: 0;
     top: 0;
@@ -503,6 +503,7 @@ margin-top:2rem;
   }
 
   .nav-menu[data-visible="true"] {
+    display:flex;
     transform: translateX(0);
   } 
 
