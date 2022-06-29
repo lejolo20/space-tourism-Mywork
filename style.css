@@ -451,20 +451,24 @@ margin-top:2rem;
 /*--------------------------------------- Revisar Esta Linea ---------------------------------------*/
 /*----------------------------------------- --------------------------------------------------------*/
 
-  ul > li, a{
-    padding-left: 0;
-  }
+ul > li{
+  margin: 0 1rem;
+}
+
+  /* ul > li, a{
+    margin: 0 1rem;
+  } */
 
 
    ul > li > a > span {
-    visibility: hidden;
-    white-space:nowrap;
+    display:none;
+    
   } 
 
   .grid-container {
     text-align: center;
-    margin: 2rem auto 0;
-    column-gap: var(--container-gap, 1rem);
+/*     margin: 2rem auto 0;
+ */    column-gap: var(--container-gap, 1rem);
     grid-template-rows: min-content 1fr;
     justify-content: center;
   }  
@@ -499,7 +503,6 @@ margin-top:2rem;
     backdrop-filter: blur(1rem);
     transform: translateX(100%);
     transition: all .5s ease-in-out;
-    overflow: hidden;
   }
 
   .nav-menu[data-visible="true"] {
@@ -507,9 +510,9 @@ margin-top:2rem;
     transform: translateX(0);
   } 
 
-  .nav-menu[data-visible="false"] {
+ /*  .nav-menu[data-visible="false"] {
     visibility: hidden;
-  }
+  } */
 
   .mobile-nav-toggle {
     display: block;
@@ -583,8 +586,9 @@ margin-top:2rem;
   max-width: 50ch;
 }
 
-.numbered-title {
+#moon > .numbered-title {
   grid-area: title;
+  margin-left:-2rem;
 }
 
 .tab-list > button {
@@ -883,4 +887,213 @@ margin-top:2rem;
     justify-self: end;
     object-fit:cover;
   }
+}
+
+
+/* ----------------------------- *//* ----------------------------- *//* ----------------------------- */
+/* ----------------------------- *//*  ---  Layout Technology   --- *//* ----------------------------- */
+/* ----------------------------- *//* ----------------------------- *//* ----------------------------- */
+
+
+@media (min-width:45rem){
+.technology{
+  background-image: url(./starter-code/assets/technology/background-technology-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.technology-main{
+display: grid;
+justify-items: center;
+grid-template-columns: 0.4fr minmax(10rem,25rem) minmax(18rem, 25rem) 0.4fr;
+grid-template-rows: auto;
+gap:2rem;
+padding-bottom: 0;
+grid-template-areas: 
+'title title title    title'
+'numbers  tech  tech    img '
+'.        tech tech    img ';
+}
+
+.technology-main .numbered-title{
+  grid-area: title;
+  
+  margin-left:12%;
+  
+}
+
+.numbers-indicators{
+  grid-area: numbers;
+  justify-self:self-end;
+}
+
+.technology-info{
+  grid-area: tech;
+  grid-row: 2 / 4;
+  grid-column: 2 /3;
+  }
+
+  #space-tab span{
+    font-size:clamp(3rem,5vw,4rem); 
+  }
+
+
+  pic-tech {
+  grid-area: img;
+  grid-row: 1 / 4;
+  grid-column: 3 /5;
+  align-self: center;
+  max-width: 85%;
+  padding-right:4rem; 
+}
+
+.technology-image-35{
+        display:none;
+      }
+
+}
+/*----------------------- Media de 35rem a 45rem ------------------------*/
+
+
+@media (min-width:35.001rem) and (max-width:44.999rem){
+
+    .technology{
+      background-image: url(./starter-code/assets/technology/background-technology-tablet.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .technology-main{
+      display: grid;
+      justify-items: center;
+      grid-template-columns: 1fr;
+      grid-template-rows: minmax(1rem,5rem) 1fr minmax(1rem, 10rem) minmax(1rem, 5rem);
+      grid-template-rows: min-content;
+      gap:1rem;
+      padding-bottom: 0;
+      grid-template-areas: 
+      'title'
+      'img'
+      'tech'
+      'numbers' ;
+      }
+      .numbered-title{
+        grid-area: title;
+        margin-left: 1rem;
+      }
+      
+      .numbers-indicators{
+        grid-area: numbers;
+        display:flex;
+        margin-bottom: 2rem;
+        justify-self:center;
+        }
+      
+      .technology-info{
+        grid-area: tech;
+        text-align: center;
+        padding: 0 2rem;
+      }
+
+      .technology-info > h2, 
+      .technology-info > span,
+      .technology-info > p {
+        margin: 1rem auto;
+      }
+      
+
+      .pic-tech   {
+        grid-area: img;
+        padding:0;
+        width:100vw;
+      }
+
+      .technology-image-35{
+        display: block;
+        
+      }
+
+      .technology-image-45{
+        display:none;
+      }
+    }
+  
+
+
+/*----------------------------- Media 35rem --------------------------------*/
+
+@media (max-width:35rem){
+
+  .technology{
+    background-image: url(./starter-code/assets/technology/background-technology-mobile.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+  }
+
+  .technology-main{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(1rem,5rem) 1fr 1rem minmax(1rem, 5rem);
+    grid-template-rows: auto;
+    gap:0;
+    padding-bottom: 0;
+    grid-template-areas: 
+    'title'
+    'img'
+    'numbers'
+    'tech'
+     ;
+    }
+
+    .numbered-title{
+      grid-area: title;
+      margin-top:4rem;
+      height:fit-content;
+    
+    }
+    
+    .numbers-indicators{
+      grid-area: numbers;
+      display:flex;
+      height:4.5rem;
+      justify-self:center;
+
+      }
+    
+    .technology-info{
+      grid-area: tech;
+      text-align: center;
+      padding: 0rem 1rem;
+      margin-top:-2rem;
+      align-self: flex-start;
+    }
+
+    .technology-info > h2, 
+    .technology-info > span,
+    .technology-info > p {
+      margin: 0 auto 1rem; 
+    }
+
+   
+    .pic-tech{
+      grid-area: img;
+      align-self: center;
+      padding:0;
+      width:100vw;
+      margin-top:-4rem;
+      }
+    
+    .technology-image-45{
+      display:none;
+    }
+
+    .technology-image-35{
+      display:block;
+      width: 101vw;
+    }
 }

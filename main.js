@@ -37,7 +37,7 @@ function changeTabFocus(e) {
     // change the tabindex of the current tab to -1
 
     if (e.keyCode===keydownLeft || e.keyCode===keydownRight){
-        tabs[tabFocus].setAttribute("tabsindex",-1);
+        tabs[tabFocus].setAttribute("tabindex",-1);
     
         // if the right key is pushed, move to the next tab on the right
         if  (e.keyCode===keydownRight){
@@ -54,7 +54,7 @@ function changeTabFocus(e) {
             }
         }
 
-    tabs[tabFocus].setAttribute("tabsindex", 0);
+    tabs[tabFocus].setAttribute("tabindex", 0);
     tabs[tabFocus].focus();
 
     console.log(tabFocus)
@@ -107,9 +107,76 @@ function hideContent(parent, content) {
     .querySelectorAll(content)
         .forEach((item) => 
             item.setAttribute("hidden", true) );
+
+            console.log(content)
 }
+
+
 
 
 function showContent(parent, content) {
-    parent.querySelector(content).removeAttribute(`hidden`)
+    parent.querySelector(content).removeAttribute("hidden")
 }
+
+/* Ejercicio 1 Eloquent JS */
+
+
+/* let input = prompt("indique la cantidad de # que requiere");*/
+
+ 
+
+/* triangulo = input=> {
+let hash="";
+for (let i=1; i<=input; i++){
+    hash +="#";
+    console.log(hash);
+    }
+} */
+
+
+/* fizz buzz */
+
+/* let number = prompt("introduzca un numero")
+
+for (let i=1; i<=number;i++){
+
+    if ((i%3 == 0) && (i%5==0)){
+        console.log(i+" fizzbuzz")
+    }
+
+    else if (i%3 == 0){
+        console.log(i + " fizz")
+    }
+    else if (i%5==0){
+        console.log(i+" buzz")
+    }
+    
+    else {
+        console.log(i)
+    }
+    
+    } */
+
+    /* ejercicio 3 Eloquent JS */
+
+    let numberColumna = []
+
+    function tablero(numberFila, numberColumna){
+
+        for(let i=0; i<numberFila;i++){
+            if(i % 2 == 0){
+                console.log(" # # # #")
+                }
+                else {
+                    console.log("# # # # ")
+                }
+
+            numberColumna = i.length()
+
+           let arrayColumna = numberColumna.push()
+
+    
+        }
+    }
+
+    

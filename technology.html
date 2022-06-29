@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <!-- Icon -->
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    
+        <!--Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap" rel="stylesheet">
+    
+        <!-- Css -->
+        <link rel="stylesheet" href="./style.css">
+    
+        <title>Frontend Mentor | Technology</title>
+</head>
+<body class="technology">
+
+    <header class="flex uppercase header" >
+        <div class="div__logo">
+            <img src="./starter-code/assets/shared/logo.svg" alt="space tourism logo" class="logo">
+        </div>
+
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false">Menu</span></button>
+        
+        <nav>
+            <ul data-visible="false" class="flex primary-navigation underline-indicators ff-sans-cond nav-menu">
+                <li><a class="uppercase text-white letter-spacing-2" href="index.html"><span aria-hidden="true">00</span> Home</a></li>
+                <li><a class="uppercase text-white letter-spacing-2" href="destination.html"><span aria-hidden="true">01</span> Destination</a></li>
+                <li><a class="uppercase text-white letter-spacing-2" href="crew-commander.html"><span aria-hidden="true">02</span> Crew</a></li>
+                <li class="active"><a class="uppercase text-white letter-spacing-2" href="#"><span aria-hidden="true">03</span> Technology</a></li>
+            </ul>
+        </nav>  
+    </header>
+
+  
+
+
+    <main id="tech" class="technology-main">
+        
+        <h1 class="numbered-title"><span aria-hidden="true">03</span> Space launch 101</h1>
+
+        <div role="tablist" aria-label="technology list" class="numbers-indicators grid">
+            <button aria-selected="true" role="tab" aria-controls="tech-tab" class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2" tabindex="0" data-image="tech-image"><span>1</span></button>
+            <button aria-selected="false" role="tab" aria-controls="space-tab" class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2" tabindex="-1" data-image="capsule-image"><span>2</span></button>
+            <button aria-selected="false" role="tab" aria-controls="capsule-tab" class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2" tabindex="-1" data-image="space-image"><span>3</span></button>
+        </div>
+
+<!-- vehicle -->
+
+        <article id="tech-tab" class="technology-info" tabindex="0" role="tabpanel">
+    
+            <h2 class="text-accent fs-600 ff-serif uppercase" >The terminology...</h2>
+            <span class="text-white fs-700 ff-serif uppercase">Launch vehicle</span>
+        
+            <p> A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a 
+            payload from Earth's surface to space, usually to Earth orbit or beyond. Our 
+            WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, 
+            it's quite an awe-inspiring sight on the launch pad!</p>
+        
+        </article>
+
+        <picture class="pic-tech" id="tech-image">
+            <img class="technology-image-45" src="./starter-code/assets/technology/image-launch-vehicle-portrait.jpg" alt="launch vehicle">
+
+            <img class="technology-image-35" src="./starter-code/assets/technology/image-launch-vehicle-landscape.jpg" alt="launch vehicle">
+        </picture>
+
+    
+
+
+
+<!-- Spaceport -->  
+        
+        <article hidden id="space-tab" class="technology-info" tabindex="-1" role="tabpanel">
+    
+            <h2 class="text-accent fs-600 ff-serif uppercase" >The terminology...</h2>
+            <span class="text-white fs-700 ff-serif uppercase">Spaceport</span>
+        
+            <p>A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, 
+                by analogy to the seaport for ships or airport for aircraft. Based in the 
+                famous Cape Canaveral, our spaceport is ideally situated to take advantage 
+                of the Earth’s rotation for launch.</p>
+        
+        </article>
+
+        
+        <picture hidden class="pic-tech" id="space-image" >
+            <img class="technology-image-45" src="./starter-code/assets/technology/image-spaceport-portrait.jpg" alt="launch vehicle">
+                
+            <img class="technology-image-35" src="./starter-code/assets/technology/image-spaceport-landscape.jpg" alt="launch vehicle">
+        </picture>
+
+    
+
+
+<!-- capsule -->
+
+
+        <article hidden id="capsule-tab" class="technology-info" tabindex="-1" role="tabpanel">
+    
+            <h2 class="text-accent fs-600 ff-serif uppercase" >The terminology...</h2>
+            <span class="text-white fs-700 ff-serif uppercase">Space capsule</span>
+            
+            <p>A space capsule is an often-crewed spacecraft that uses a blunt-body reentry 
+                capsule to reenter the Earth's atmosphere without wings. Our capsule is where 
+                you'll spend your time during the flight. It includes a space gym, cinema, 
+                and plenty of other activities to keep you entertained.</p>
+        
+        </article>
+
+        <picture hidden class="pic-tech" id="capsule-image">
+            <img class="technology-image-45"src="./starter-code/assets/technology/image-space-capsule-portrait.jpg" alt="launch vehicle">
+                
+            <img class="technology-image-35" src="./starter-code/assets/technology/image-space-capsule-landscape.jpg" alt="launch vehicle">
+        </picture>
+    
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
