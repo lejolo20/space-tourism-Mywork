@@ -54,7 +54,7 @@ function changeTabFocus(e) {
             }
         }
 
-    tabs[tabFocus].setAttribute("tabindex", 0);
+    tabs[tabFocus].setAttribute(`tabindex`, 0);
     tabs[tabFocus].focus();
 
     console.log(tabFocus)
@@ -73,7 +73,7 @@ function changeTabPanel(e) {
     const tabContainer = targetTab.parentNode; 
     const mainContainer = tabContainer.parentNode;
 
-    tabContainer.querySelector(`[aria-selected="true"]`).setAttribute("aria-selected",false);
+    tabContainer.querySelector('[aria-selected="true"]').setAttribute("aria-selected", false);
 
     targetTab.setAttribute("aria-selected",true);
 
@@ -159,7 +159,7 @@ for (let i=1; i<=number;i++){
 
     /* ejercicio 3 Eloquent JS */
 
-    let numberColumna = []
+    /* let numberColumna = []
 
     function tablero(numberFila, numberColumna){
 
@@ -177,6 +177,6 @@ for (let i=1; i<=number;i++){
 
     
         }
-    }
+    } */
 
     
